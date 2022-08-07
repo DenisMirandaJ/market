@@ -1,4 +1,4 @@
-import { WarehouseModule } from './market/market.module';
+import { MarketModule } from './market/market.module';
 import { Module } from '@nestjs/common';
 import { PrismaModule } from './db/prisma.module';
 import { ConfigModule } from '@nestjs/config';
@@ -10,7 +10,7 @@ import { ConfigModule } from '@nestjs/config';
       // validate: validateEnvVariables,
       isGlobal: true,
     }),
-    WarehouseModule,
+    MarketModule,
   ],
   controllers: [],
   providers: [],

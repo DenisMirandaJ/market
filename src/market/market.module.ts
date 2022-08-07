@@ -35,4 +35,4 @@ import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
     MarketMessagePublisherService,
   ],
 })
-export class WarehouseModule {}
+export class MarketModule {}
