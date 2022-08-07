@@ -1,8 +1,8 @@
 import { MarketMessagePublisherService } from './services/marketMessagePublisher.service';
 import { PrismaModule } from '../db/prisma.module';
-import { MarketRepository } from './repositories/warehouse.repository';
+import { MarketRepository } from './repositories/market.repository';
 import { MarketService } from './services/market.service';
-import { WarehouseController } from './controller/warehouse.controller';
+import { MarketController } from './controller/market.controller';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
@@ -26,10 +26,10 @@ import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
       }),
     }),
   ],
-  controllers: [WarehouseController],
+  controllers: [MarketController],
 
   providers: [
-    WarehouseController,
+    MarketController,
     MarketService,
     MarketRepository,
     MarketMessagePublisherService,
