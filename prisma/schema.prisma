@@ -7,23 +7,3 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
-
-enum IngredientsEnum {
-  tomato
-  lemon
-  potato
-  rice
-  ketchup
-  lettuce
-  onion
-  cheese
-  meat
-  chicken
-}
-
-model BuyOrders {
-  id            Int             @id @default(autoincrement())
-  ingredient    IngredientsEnum @unique
-  quantityToBuy Int
-
-}
