@@ -1,3 +1,5 @@
+import { MarketCronService } from './services/market.cronservices';
+import { ExternalMarketService } from './services/external-market.service';
 import { MarketMessagePublisherService } from './services/marketMessagePublisher.service';
 import { PrismaModule } from '../db/prisma.module';
 import { MarketRepository } from './repositories/market.repository';
@@ -33,6 +35,8 @@ import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
     MarketService,
     MarketRepository,
     MarketMessagePublisherService,
+    ExternalMarketService,
+    MarketCronService,
   ],
 })
 export class MarketModule {}
