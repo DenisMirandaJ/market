@@ -25,5 +25,4 @@ model BuyOrders {
   id            Int             @id @default(autoincrement())
   ingredient    IngredientsEnum @unique
   quantityToBuy Int
-
 }
